@@ -10,6 +10,14 @@ public class EmailService implements Message {
     public void sendMessage() {
         System.out.println("Sending email...");
     }
-    
+
+    @Override
+    public void initialize() {
+        System.out.println("EmailService: Initialization logic here");
+    }
+    @Override
+    public void cleanup() {
+        System.out.println("EmailService: Cleanup logic here"); 
+    }
 
 }

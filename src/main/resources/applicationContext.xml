@@ -7,8 +7,7 @@
 
     <!-- Bean definitions for the application's services -->
 
-    <bean id="emailService" class="com.example.EmailService" />
+    <bean id="emailService" class="com.example.EmailService" init-method="initialize" destroy-method="cleanup"  />
 
-    <bean id="smsService" class="com.example.SMSService" />
-
+    <bean id="smsService" class="com.example.SMSService" init-method="initialize" destroy-method="cleanup" />
 </beans>
